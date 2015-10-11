@@ -11,7 +11,7 @@
 
 	<!-- クラスパス -->
 	<path id="classpath.all">
-		<fileset dir="../haccommon/lib">
+		<fileset dir="./lib">
 			<include name="*.jar" />
 		</fileset>
 	</path>
@@ -37,10 +37,12 @@
 	<!-- JARファイル作成 -->
 	<target name="makeJar" description="JARファイル作成" depends="compile">
 		<echo message="JARファイルを作成・コピー" />
-		<jar basedir="${dir.classes}" destfile="hacdev.jar" />
+		<jar basedir="${dir.classes}" destfile="tsrvfwcommon.jar" />
+		<!-- 
 		<delete file="../hacweb/WEB-INF/lib/hacdev.jar" />
 		<copy file="hacdev.jar" todir="../hacweb/WEB-INF/lib">
 		</copy>
+		-->
 	</target>
 
 </project>
